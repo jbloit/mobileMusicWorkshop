@@ -20,8 +20,11 @@ public:
     void callback( Float32 * buffer, UInt32 numFrames, void * userData );
     
     void setFreq(float freq) { m_freq = freq; }
+    void setOscillator(int idx) { currentOsc = idx;} 
+   
     
 private:
+    int currentOsc;
     
     float m_modGain;
     float m_modFreq;

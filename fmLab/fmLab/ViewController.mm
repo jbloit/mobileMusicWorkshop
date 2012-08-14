@@ -11,6 +11,8 @@
 #include "Audio.h"
 
 
+
+
 @interface ViewController ()
 {
     Audio * audio;
@@ -73,12 +75,17 @@
     }
 }
 
-
-
 - (IBAction)changeFreq:(id)sender
 {
     UISlider * slider = (UISlider *)sender;
     audio->setFreq(220+slider.value*220);
+}
+
+- (IBAction)changeOsc:(id)sender
+{
+    UISegmentedControl * tabs = (UISegmentedControl *)sender;
+    NSLog(@"oscillator index : %d\n",tabs.selectedSegmentIndex);
+    audio->setOscillator(tabs.selectedSegmentIndex);
 }
 
 
