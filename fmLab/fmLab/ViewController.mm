@@ -84,10 +84,23 @@
 - (IBAction)changeOsc:(id)sender
 {
     UISegmentedControl * tabs = (UISegmentedControl *)sender;
-    NSLog(@"oscillator index : %d\n",tabs.selectedSegmentIndex);
+    NSLog(@"oscillator index : %d\n", tabs.selectedSegmentIndex);
     audio->setOscillator(tabs.selectedSegmentIndex);
 }
 
+- (IBAction)switchOsc:(id)sender
+{
+    UISwitch * onoff = (UISwitch *)sender;
+    if(onoff.isOn) NSLog(@"oscillator ON \n"); else NSLog(@"oscillator OFF \n");
+    audio->setAudio(onoff.isOn);
+}
+
+- (IBAction)setModGain:(id)sender
+{
+    UISlider * slider = (UISlider *)sender;
+    NSLog(@"modulation gain %f\n", slider.value);
+    audio->setModGain(slider.value * 1000);
+}
 
 
 

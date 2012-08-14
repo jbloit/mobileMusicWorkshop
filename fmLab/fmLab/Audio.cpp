@@ -57,6 +57,7 @@ Audio::Audio()
     MoAudio::init(SRATE, BUFFER_SIZE, 2);
     MoAudio::start(g_callback, this);
     
+    audioOn = false;
     currentOsc = 0;
     
     m_phase = 0;
@@ -73,39 +74,47 @@ Audio::~Audio()
     
 }
 
-void Audio::callback( Float32 * buffer, UInt32 numFrames, void * userData )
-{
-    for(int i = 0; i < numFrames; i++)
-    {
-        float mod = m_modGain * sineOsc(m_modPhase);
-        
-        m_modPhase += m_modFreq/SRATE;
-        if(m_modPhase > 1) m_modPhase -= 1;
-        
-        float sample;
-        switch(currentOsc){
-            case 0:
-                sample = m_gain * sineOsc(m_phase);
-                break;
-            case 1:
-                sample = m_gain * triangleOsc(m_phase);
-                break;                
-            case 2:
-                sample = m_gain * sawToothOsc(m_phase);
-                break;                
-            case 3:
-                sample = m_gain * squareOsc(m_phase);
-                break;                
-            default:
-                sample = m_gain * sineOsc(m_phase);
-                break;
+void Audio::callback( Float32 * buffer, UInt32 numFrames, void * userData ){
+    
+    if (audioOn){
+        for(int i = 0; i < numFrames; i++) {            
+                float mod = m_modGain * sineOsc(m_modPhase);
+                
+                m_modPhase += m_modFreq/SRATE;
+                if(m_modPhase > 1) m_modPhase -= 1;
+                
+                float sample;
+                switch(currentOsc){
+                    case 0:
+                        sample = m_gain * sineOsc(m_phase);
+                        break;
+                    case 1:
+                        sample = m_gain * triangleOsc(m_phase);
+                        break;                
+                    case 2:
+                        sample = m_gain * sawToothOsc(m_phase);
+                        break;                
+                    case 3:
+                        sample = m_gain * squareOsc(m_phase);
+                        break;                
+                    default:
+                        sample = m_gain * sineOsc(m_phase);
+                        break;
+                }
+                
+                m_phase += (m_freq+mod)/SRATE;
+                if(m_phase > 1) m_phase -= 1;
+                
+                buffer[i*2] = sample;
+                buffer[i*2+1] = sample;
+            }
+            
+    } else {
+        for(int i = 0; i < numFrames; i++) { 
+            buffer[i*2] = 0.0;
+            buffer[i*2+1] = 0.0;
+
         }
-        
-        m_phase += (m_freq+mod)/SRATE;
-        if(m_phase > 1) m_phase -= 1;
-        
-        buffer[i*2] = sample;
-        buffer[i*2+1] = sample;
     }
 }
 

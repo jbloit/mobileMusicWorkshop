@@ -19,11 +19,13 @@ public:
     
     void callback( Float32 * buffer, UInt32 numFrames, void * userData );
     
-    void setFreq(float freq) { m_freq = freq; }
+    void setFreq(float freq) { m_freq = freq;}
     void setOscillator(int idx) { currentOsc = idx;} 
-   
+    void setAudio(bool isOn) {audioOn = isOn;}
+    void setModGain(float gain) {m_modGain = gain;}
     
 private:
+    bool audioOn;
     int currentOsc;
     
     float m_modGain;
