@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D18B1F015D9C40B007FABF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D18B1EF15D9C40B007FABF9 /* UIKit.framework */; };
+		6D18B1F215D9C40B007FABF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D18B1F115D9C40B007FABF9 /* Foundation.framework */; };
+		6D18B1F415D9C40B007FABF9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D18B1F315D9C40B007FABF9 /* CoreGraphics.framework */; };
+		6D18B1FA15D9C40B007FABF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D18B1F815D9C40B007FABF9 /* InfoPlist.strings */; };
+		6D18B1FC15D9C40B007FABF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18B1FB15D9C40B007FABF9 /* main.m */; };
+		6D18B20015D9C40B007FABF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18B1FF15D9C40B007FABF9 /* AppDelegate.m */; };
+		6D18B20315D9C40B007FABF9 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6D18B20215D9C40B007FABF9 /* ViewController.mm */; };
+		6D18B20615D9C40B007FABF9 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D18B20415D9C40B007FABF9 /* ViewController_iPhone.xib */; };
+		6D18B20915D9C40B007FABF9 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D18B20715D9C40B007FABF9 /* ViewController_iPad.xib */; };
+		6D18B21115D9C437007FABF9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D18B20F15D9C437007FABF9 /* AudioToolbox.framework */; };
+		6D18B21215D9C437007FABF9 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D18B21015D9C437007FABF9 /* CoreAudio.framework */; };
+		6D18B21615D9C45D007FABF9 /* mo_audio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6D18B21415D9C45D007FABF9 /* mo_audio.mm */; };
+		6D18B21815D9C478007FABF9 /* Audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D18B21715D9C478007FABF9 /* Audio.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6D18B1EB15D9C40B007FABF9 /* fmLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fmLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D18B1EF15D9C40B007FABF9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6D18B1F115D9C40B007FABF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6D18B1F315D9C40B007FABF9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6D18B1F715D9C40B007FABF9 /* fmLab-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fmLab-Info.plist"; sourceTree = "<group>"; };
+		6D18B1F915D9C40B007FABF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6D18B1FB15D9C40B007FABF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D18B1FD15D9C40B007FABF9 /* fmLab-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fmLab-Prefix.pch"; sourceTree = "<group>"; };
+		6D18B1FE15D9C40B007FABF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6D18B1FF15D9C40B007FABF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6D18B20115D9C40B007FABF9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6D18B20215D9C40B007FABF9 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		6D18B20515D9C40B007FABF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		6D18B20815D9C40B007FABF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		6D18B20F15D9C437007FABF9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6D18B21015D9C437007FABF9 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		6D18B21315D9C45D007FABF9 /* mo_audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mo_audio.h; sourceTree = "<group>"; };
+		6D18B21415D9C45D007FABF9 /* mo_audio.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = mo_audio.mm; sourceTree = "<group>"; };
+		6D18B21515D9C45D007FABF9 /* mo_def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mo_def.h; sourceTree = "<group>"; };
+		6D18B21715D9C478007FABF9 /* Audio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Audio.cpp; sourceTree = "<group>"; };
+		6D18B21915D9C48A007FABF9 /* Audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Audio.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D18B1E815D9C40B007FABF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D18B21115D9C437007FABF9 /* AudioToolbox.framework in Frameworks */,
+				6D18B21215D9C437007FABF9 /* CoreAudio.framework in Frameworks */,
+				6D18B1F015D9C40B007FABF9 /* UIKit.framework in Frameworks */,
+				6D18B1F215D9C40B007FABF9 /* Foundation.framework in Frameworks */,
+				6D18B1F415D9C40B007FABF9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D18B1E015D9C40B007FABF9 = {
+			isa = PBXGroup;
+			children = (
+				6D18B1F515D9C40B007FABF9 /* fmLab */,
+				6D18B1EE15D9C40B007FABF9 /* Frameworks */,
+				6D18B1EC15D9C40B007FABF9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D18B1EC15D9C40B007FABF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D18B1EB15D9C40B007FABF9 /* fmLab.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D18B1EE15D9C40B007FABF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D18B20F15D9C437007FABF9 /* AudioToolbox.framework */,
+				6D18B21015D9C437007FABF9 /* CoreAudio.framework */,
+				6D18B1EF15D9C40B007FABF9 /* UIKit.framework */,
+				6D18B1F115D9C40B007FABF9 /* Foundation.framework */,
+				6D18B1F315D9C40B007FABF9 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D18B1F515D9C40B007FABF9 /* fmLab */ = {
+			isa = PBXGroup;
+			children = (
+				6D18B1FE15D9C40B007FABF9 /* AppDelegate.h */,
+				6D18B1FF15D9C40B007FABF9 /* AppDelegate.m */,
+				6D18B20115D9C40B007FABF9 /* ViewController.h */,
+				6D18B21315D9C45D007FABF9 /* mo_audio.h */,
+				6D18B21415D9C45D007FABF9 /* mo_audio.mm */,
+				6D18B21715D9C478007FABF9 /* Audio.cpp */,
+				6D18B21915D9C48A007FABF9 /* Audio.h */,
+				6D18B21515D9C45D007FABF9 /* mo_def.h */,
+				6D18B20215D9C40B007FABF9 /* ViewController.mm */,
+				6D18B20415D9C40B007FABF9 /* ViewController_iPhone.xib */,
+				6D18B20715D9C40B007FABF9 /* ViewController_iPad.xib */,
+				6D18B1F615D9C40B007FABF9 /* Supporting Files */,
+			);
+			path = fmLab;
+			sourceTree = "<group>";
+		};
+		6D18B1F615D9C40B007FABF9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D18B1F715D9C40B007FABF9 /* fmLab-Info.plist */,
+				6D18B1F815D9C40B007FABF9 /* InfoPlist.strings */,
+				6D18B1FB15D9C40B007FABF9 /* main.m */,
+				6D18B1FD15D9C40B007FABF9 /* fmLab-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D18B1EA15D9C40B007FABF9 /* fmLab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D18B20C15D9C40B007FABF9 /* Build configuration list for PBXNativeTarget "fmLab" */;
+			buildPhases = (
+				6D18B1E715D9C40B007FABF9 /* Sources */,
+				6D18B1E815D9C40B007FABF9 /* Frameworks */,
+				6D18B1E915D9C40B007FABF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fmLab;
+			productName = fmLab;
+			productReference = 6D18B1EB15D9C40B007FABF9 /* fmLab.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D18B1E215D9C40B007FABF9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 6D18B1E515D9C40B007FABF9 /* Build configuration list for PBXProject "fmLab" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6D18B1E015D9C40B007FABF9;
+			productRefGroup = 6D18B1EC15D9C40B007FABF9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D18B1EA15D9C40B007FABF9 /* fmLab */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D18B1E915D9C40B007FABF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D18B1FA15D9C40B007FABF9 /* InfoPlist.strings in Resources */,
+				6D18B20615D9C40B007FABF9 /* ViewController_iPhone.xib in Resources */,
+				6D18B20915D9C40B007FABF9 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D18B1E715D9C40B007FABF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D18B1FC15D9C40B007FABF9 /* main.m in Sources */,
+				6D18B20015D9C40B007FABF9 /* AppDelegate.m in Sources */,
+				6D18B20315D9C40B007FABF9 /* ViewController.mm in Sources */,
+				6D18B21615D9C45D007FABF9 /* mo_audio.mm in Sources */,
+				6D18B21815D9C478007FABF9 /* Audio.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6D18B1F815D9C40B007FABF9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D18B1F915D9C40B007FABF9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6D18B20415D9C40B007FABF9 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D18B20515D9C40B007FABF9 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		6D18B20715D9C40B007FABF9 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D18B20815D9C40B007FABF9 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D18B20A15D9C40B007FABF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D18B20B15D9C40B007FABF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D18B20D15D9C40B007FABF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fmLab/fmLab-Prefix.pch";
+				INFOPLIST_FILE = "fmLab/fmLab-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6D18B20E15D9C40B007FABF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fmLab/fmLab-Prefix.pch";
+				INFOPLIST_FILE = "fmLab/fmLab-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D18B1E515D9C40B007FABF9 /* Build configuration list for PBXProject "fmLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D18B20A15D9C40B007FABF9 /* Debug */,
+				6D18B20B15D9C40B007FABF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D18B20C15D9C40B007FABF9 /* Build configuration list for PBXNativeTarget "fmLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D18B20D15D9C40B007FABF9 /* Debug */,
+				6D18B20E15D9C40B007FABF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D18B1E215D9C40B007FABF9 /* Project object */;
+}
