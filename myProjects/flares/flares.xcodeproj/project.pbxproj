@@ -25,6 +25,7 @@
 		6D14431A15DC4B7E003DB336 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6D14431315DC4B7E003DB336 /* Texture.mm */; };
 		6D14431D15DC4BA5003DB336 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D14431B15DC4BA5003DB336 /* GLKit.framework */; };
 		6D14431E15DC4BA5003DB336 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D14431C15DC4BA5003DB336 /* OpenGLES.framework */; };
+		6D14432415DC4F63003DB336 /* Flare.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6D14432315DC4F63003DB336 /* Flare.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		6D14431315DC4B7E003DB336 /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Texture.mm; sourceTree = "<group>"; };
 		6D14431B15DC4BA5003DB336 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		6D14431C15DC4BA5003DB336 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6D14432315DC4F63003DB336 /* Flare.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Flare.mm; sourceTree = "<group>"; };
+		6D14432515DC4F71003DB336 /* Flare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flare.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				6D1442FB15DC4B3C003DB336 /* ViewController.h */,
 				6D1442FC15DC4B3C003DB336 /* ViewController.m */,
 				6D1442FE15DC4B3C003DB336 /* ViewController_iPhone.xib */,
+				6D14432315DC4F63003DB336 /* Flare.mm */,
+				6D14432515DC4F71003DB336 /* Flare.h */,
 				6D14430115DC4B3C003DB336 /* ViewController_iPad.xib */,
 				6D14430915DC4B7E003DB336 /* flare.png */,
 				6D14430A15DC4B7E003DB336 /* Geometry.cpp */,
@@ -211,6 +216,7 @@
 				6D14431515DC4B7E003DB336 /* Geometry.cpp in Sources */,
 				6D14431615DC4B7E003DB336 /* GLViewController.mm in Sources */,
 				6D14431A15DC4B7E003DB336 /* Texture.mm in Sources */,
+				6D14432415DC4F63003DB336 /* Flare.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

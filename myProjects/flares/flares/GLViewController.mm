@@ -9,6 +9,7 @@
 #import "GLViewController.h"
 #import "Geometry.h"
 
+#include "Flare.h"
 
 //------------------------------------------------------------------------------
 // name: uiview2gl
@@ -25,7 +26,13 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
 
 
 
-@interface GLViewController ()
+@interface GLViewController (){
+    
+    GLuint tex;
+
+    Flare * aFlare;
+    
+}
 
 @property (strong, nonatomic) EAGLContext *context;
 
@@ -60,6 +67,22 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
     view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
     
     [EAGLContext setCurrentContext:self.context];
+    
+    glEnable(GL_TEXTURE_2D);
+
+    tex = loadTexture(@"flare.png");
+    
+    
+    aFlare = new Flare();
+    aFlare->position.x = 0;
+    aFlare->position.y = 0;
+    //aFlare->c = GLcolor4f(1, 1, 1, 1);
+    aFlare->scale = 1;
+    aFlare->tex = tex;
+    
+     NSLog(@"view loaded");
+    
+    
 }
 
 - (void)viewDidUnload
@@ -101,14 +124,37 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
     /*** set model + view matrix ***/
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-
+    
+    glDisable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    // normal blending
+    //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    // additive blending
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+    
+    glPushMatrix();
+        aFlare->render();
+    glPopMatrix();
+    
+    
     
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    
+     NSLog(@"touched out of loop");
     for(UITouch * touch in touches)
     {
+        NSLog(@"touched");
+        CGPoint p = [touch locationInView:self.view];
+        GLvertex2f touchPosition = uiview2gl(p, self.view);
+//        
+//        aFlare = new Flare;
+        aFlare->position = touchPosition;
+//        //aFlare->c = GLcolor4f(1, 1, 1, 1);
+//        aFlare->scale = 1;
+//        aFlare->tex = tex;
     }
 }
 
@@ -116,6 +162,9 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
 {
     for(UITouch * touch in touches)
     {
+        CGPoint p = [touch locationInView:self.view];
+        GLvertex2f touchPosition = uiview2gl(p, self.view);
+        aFlare->position = touchPosition;
     }
 }
 
@@ -123,6 +172,7 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
 {
     for(UITouch * touch in touches)
     {
+
     }
 }
 
