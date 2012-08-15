@@ -149,12 +149,9 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
         NSLog(@"touched");
         CGPoint p = [touch locationInView:self.view];
         GLvertex2f touchPosition = uiview2gl(p, self.view);
-//        
-//        aFlare = new Flare;
+
         aFlare->position = touchPosition;
-//        //aFlare->c = GLcolor4f(1, 1, 1, 1);
-//        aFlare->scale = 1;
-//        aFlare->tex = tex;
+/
     }
 }
 
