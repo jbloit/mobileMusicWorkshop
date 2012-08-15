@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D1442EA15DC4B3B003DB336 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1442E915DC4B3B003DB336 /* UIKit.framework */; };
+		6D1442EC15DC4B3B003DB336 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1442EB15DC4B3B003DB336 /* Foundation.framework */; };
+		6D1442EE15DC4B3B003DB336 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1442ED15DC4B3B003DB336 /* CoreGraphics.framework */; };
+		6D1442F415DC4B3C003DB336 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D1442F215DC4B3C003DB336 /* InfoPlist.strings */; };
+		6D1442F615DC4B3C003DB336 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1442F515DC4B3C003DB336 /* main.m */; };
+		6D1442FA15DC4B3C003DB336 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1442F915DC4B3C003DB336 /* AppDelegate.m */; };
+		6D1442FD15DC4B3C003DB336 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1442FC15DC4B3C003DB336 /* ViewController.m */; };
+		6D14430015DC4B3C003DB336 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D1442FE15DC4B3C003DB336 /* ViewController_iPhone.xib */; };
+		6D14430315DC4B3C003DB336 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D14430115DC4B3C003DB336 /* ViewController_iPad.xib */; };
+		6D14431415DC4B7E003DB336 /* flare.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D14430915DC4B7E003DB336 /* flare.png */; };
+		6D14431515DC4B7E003DB336 /* Geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D14430A15DC4B7E003DB336 /* Geometry.cpp */; };
+		6D14431615DC4B7E003DB336 /* GLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6D14430D15DC4B7E003DB336 /* GLViewController.mm */; };
+		6D14431715DC4B7E003DB336 /* GLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D14430E15DC4B7E003DB336 /* GLViewController.xib */; };
+		6D14431815DC4B7E003DB336 /* GLViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D14430F15DC4B7E003DB336 /* GLViewController~iphone.xib */; };
+		6D14431915DC4B7E003DB336 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6D14431115DC4B7E003DB336 /* ReadMe.txt */; };
+		6D14431A15DC4B7E003DB336 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6D14431315DC4B7E003DB336 /* Texture.mm */; };
+		6D14431D15DC4BA5003DB336 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D14431B15DC4BA5003DB336 /* GLKit.framework */; };
+		6D14431E15DC4BA5003DB336 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D14431C15DC4BA5003DB336 /* OpenGLES.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6D1442E515DC4B3B003DB336 /* flares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flares.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D1442E915DC4B3B003DB336 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6D1442EB15DC4B3B003DB336 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6D1442ED15DC4B3B003DB336 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6D1442F115DC4B3C003DB336 /* flares-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "flares-Info.plist"; sourceTree = "<group>"; };
+		6D1442F315DC4B3C003DB336 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6D1442F515DC4B3C003DB336 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D1442F715DC4B3C003DB336 /* flares-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "flares-Prefix.pch"; sourceTree = "<group>"; };
+		6D1442F815DC4B3C003DB336 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6D1442F915DC4B3C003DB336 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6D1442FB15DC4B3C003DB336 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6D1442FC15DC4B3C003DB336 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6D1442FF15DC4B3C003DB336 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		6D14430215DC4B3C003DB336 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		6D14430915DC4B7E003DB336 /* flare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flare.png; sourceTree = "<group>"; };
+		6D14430A15DC4B7E003DB336 /* Geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Geometry.cpp; sourceTree = "<group>"; };
+		6D14430B15DC4B7E003DB336 /* Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
+		6D14430C15DC4B7E003DB336 /* GLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLViewController.h; sourceTree = "<group>"; };
+		6D14430D15DC4B7E003DB336 /* GLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLViewController.mm; sourceTree = "<group>"; };
+		6D14430E15DC4B7E003DB336 /* GLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLViewController.xib; sourceTree = "<group>"; };
+		6D14430F15DC4B7E003DB336 /* GLViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "GLViewController~iphone.xib"; sourceTree = "<group>"; };
+		6D14431015DC4B7E003DB336 /* hsv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hsv.h; sourceTree = "<group>"; };
+		6D14431115DC4B7E003DB336 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		6D14431215DC4B7E003DB336 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		6D14431315DC4B7E003DB336 /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Texture.mm; sourceTree = "<group>"; };
+		6D14431B15DC4BA5003DB336 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		6D14431C15DC4BA5003DB336 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D1442E215DC4B3B003DB336 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D14431D15DC4BA5003DB336 /* GLKit.framework in Frameworks */,
+				6D14431E15DC4BA5003DB336 /* OpenGLES.framework in Frameworks */,
+				6D1442EA15DC4B3B003DB336 /* UIKit.framework in Frameworks */,
+				6D1442EC15DC4B3B003DB336 /* Foundation.framework in Frameworks */,
+				6D1442EE15DC4B3B003DB336 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D1442DA15DC4B3B003DB336 = {
+			isa = PBXGroup;
+			children = (
+				6D14431B15DC4BA5003DB336 /* GLKit.framework */,
+				6D14431C15DC4BA5003DB336 /* OpenGLES.framework */,
+				6D1442EF15DC4B3B003DB336 /* flares */,
+				6D1442E815DC4B3B003DB336 /* Frameworks */,
+				6D1442E615DC4B3B003DB336 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D1442E615DC4B3B003DB336 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D1442E515DC4B3B003DB336 /* flares.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D1442E815DC4B3B003DB336 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D1442E915DC4B3B003DB336 /* UIKit.framework */,
+				6D1442EB15DC4B3B003DB336 /* Foundation.framework */,
+				6D1442ED15DC4B3B003DB336 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D1442EF15DC4B3B003DB336 /* flares */ = {
+			isa = PBXGroup;
+			children = (
+				6D1442F815DC4B3C003DB336 /* AppDelegate.h */,
+				6D1442F915DC4B3C003DB336 /* AppDelegate.m */,
+				6D1442FB15DC4B3C003DB336 /* ViewController.h */,
+				6D1442FC15DC4B3C003DB336 /* ViewController.m */,
+				6D1442FE15DC4B3C003DB336 /* ViewController_iPhone.xib */,
+				6D14430115DC4B3C003DB336 /* ViewController_iPad.xib */,
+				6D14430915DC4B7E003DB336 /* flare.png */,
+				6D14430A15DC4B7E003DB336 /* Geometry.cpp */,
+				6D14430B15DC4B7E003DB336 /* Geometry.h */,
+				6D14430C15DC4B7E003DB336 /* GLViewController.h */,
+				6D14430D15DC4B7E003DB336 /* GLViewController.mm */,
+				6D14430E15DC4B7E003DB336 /* GLViewController.xib */,
+				6D14430F15DC4B7E003DB336 /* GLViewController~iphone.xib */,
+				6D14431015DC4B7E003DB336 /* hsv.h */,
+				6D14431115DC4B7E003DB336 /* ReadMe.txt */,
+				6D14431215DC4B7E003DB336 /* Texture.h */,
+				6D14431315DC4B7E003DB336 /* Texture.mm */,
+				6D1442F015DC4B3C003DB336 /* Supporting Files */,
+			);
+			path = flares;
+			sourceTree = "<group>";
+		};
+		6D1442F015DC4B3C003DB336 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D1442F115DC4B3C003DB336 /* flares-Info.plist */,
+				6D1442F215DC4B3C003DB336 /* InfoPlist.strings */,
+				6D1442F515DC4B3C003DB336 /* main.m */,
+				6D1442F715DC4B3C003DB336 /* flares-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D1442E415DC4B3B003DB336 /* flares */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D14430615DC4B3C003DB336 /* Build configuration list for PBXNativeTarget "flares" */;
+			buildPhases = (
+				6D1442E115DC4B3B003DB336 /* Sources */,
+				6D1442E215DC4B3B003DB336 /* Frameworks */,
+				6D1442E315DC4B3B003DB336 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = flares;
+			productName = flares;
+			productReference = 6D1442E515DC4B3B003DB336 /* flares.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D1442DC15DC4B3B003DB336 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 6D1442DF15DC4B3B003DB336 /* Build configuration list for PBXProject "flares" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6D1442DA15DC4B3B003DB336;
+			productRefGroup = 6D1442E615DC4B3B003DB336 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D1442E415DC4B3B003DB336 /* flares */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D1442E315DC4B3B003DB336 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D1442F415DC4B3C003DB336 /* InfoPlist.strings in Resources */,
+				6D14430015DC4B3C003DB336 /* ViewController_iPhone.xib in Resources */,
+				6D14430315DC4B3C003DB336 /* ViewController_iPad.xib in Resources */,
+				6D14431415DC4B7E003DB336 /* flare.png in Resources */,
+				6D14431715DC4B7E003DB336 /* GLViewController.xib in Resources */,
+				6D14431815DC4B7E003DB336 /* GLViewController~iphone.xib in Resources */,
+				6D14431915DC4B7E003DB336 /* ReadMe.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D1442E115DC4B3B003DB336 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D1442F615DC4B3C003DB336 /* main.m in Sources */,
+				6D1442FA15DC4B3C003DB336 /* AppDelegate.m in Sources */,
+				6D1442FD15DC4B3C003DB336 /* ViewController.m in Sources */,
+				6D14431515DC4B7E003DB336 /* Geometry.cpp in Sources */,
+				6D14431615DC4B7E003DB336 /* GLViewController.mm in Sources */,
+				6D14431A15DC4B7E003DB336 /* Texture.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6D1442F215DC4B3C003DB336 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D1442F315DC4B3C003DB336 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6D1442FE15DC4B3C003DB336 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D1442FF15DC4B3C003DB336 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		6D14430115DC4B3C003DB336 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D14430215DC4B3C003DB336 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D14430415DC4B3C003DB336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D14430515DC4B3C003DB336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D14430715DC4B3C003DB336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "flares/flares-Prefix.pch";
+				INFOPLIST_FILE = "flares/flares-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6D14430815DC4B3C003DB336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "flares/flares-Prefix.pch";
+				INFOPLIST_FILE = "flares/flares-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D1442DF15DC4B3B003DB336 /* Build configuration list for PBXProject "flares" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D14430415DC4B3C003DB336 /* Debug */,
+				6D14430515DC4B3C003DB336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D14430615DC4B3C003DB336 /* Build configuration list for PBXNativeTarget "flares" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D14430715DC4B3C003DB336 /* Debug */,
+				6D14430815DC4B3C003DB336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D1442DC15DC4B3B003DB336 /* Project object */;
+}
