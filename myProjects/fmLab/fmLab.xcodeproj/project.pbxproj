@@ -96,16 +96,16 @@
 			children = (
 				6D18B1FE15D9C40B007FABF9 /* AppDelegate.h */,
 				6D18B1FF15D9C40B007FABF9 /* AppDelegate.m */,
-				6D18B20115D9C40B007FABF9 /* ViewController.h */,
-				6D18B21315D9C45D007FABF9 /* mo_audio.h */,
-				6D18B21415D9C45D007FABF9 /* mo_audio.mm */,
 				6D18B21715D9C478007FABF9 /* Audio.cpp */,
 				6D18B21915D9C48A007FABF9 /* Audio.h */,
+				6D18B21315D9C45D007FABF9 /* mo_audio.h */,
+				6D18B21415D9C45D007FABF9 /* mo_audio.mm */,
 				6D18B21515D9C45D007FABF9 /* mo_def.h */,
-				6D18B20215D9C40B007FABF9 /* ViewController.mm */,
-				6D18B20415D9C40B007FABF9 /* ViewController_iPhone.xib */,
-				6D18B20715D9C40B007FABF9 /* ViewController_iPad.xib */,
 				6D18B1F615D9C40B007FABF9 /* Supporting Files */,
+				6D18B20115D9C40B007FABF9 /* ViewController.h */,
+				6D18B20215D9C40B007FABF9 /* ViewController.mm */,
+				6D18B20715D9C40B007FABF9 /* ViewController_iPad.xib */,
+				6D18B20415D9C40B007FABF9 /* ViewController_iPhone.xib */,
 			);
 			path = fmLab;
 			sourceTree = "<group>";

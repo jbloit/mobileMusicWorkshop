@@ -7,8 +7,23 @@
 //
 
 #import "ViewController.h"
+#import "OSCManager.h"
+
+
+#include "Audio.h"
+
+
+@interface ViewController ()
+
+@property (nonatomic, strong) OSCManager *myManager;
+@property (nonatomic, strong) OSCOutPort *outPort;
+@end
 
 @implementation ViewController
+
+
+@synthesize myManager;
+@synthesize outPort;
 
 - (void)didReceiveMemoryWarning
 {
@@ -22,6 +37,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.myManager = [[OSCManager alloc] init];
+    [self.myManager setDelegate:self];
+    
+    self.outPort = [[OSCOutPort alloc] initWithAddress:@"127.0.0.1" andPort:12345];
+    
+    [self.myManager createNewInputForPort:7777];
 }
 
 - (void)viewDidUnload
@@ -39,6 +61,11 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    
+
+
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -60,5 +87,26 @@
         return YES;
     }
 }
+
+-(IBAction)playNoteAndSend:(id)sender{
+
+    OSCMessage *msg = [OSCMessage createWithAddress:@"/test/osc1"];
+    [msg addFloat:660.0];
+    [msg addFloat:0.5];
+    
+    [self.outPort sendThisMessage:msg];
+    
+    NSLog(@"message sent!");
+    
+    
+}
+
+- (void) receivedOSCMessage:(OSCMessage *)msg
+{
+    NSString *addressSpace = msg.address;
+    
+    NSLog(@"The address space message from is: %@", addressSpace);
+}
+
 
 @end
