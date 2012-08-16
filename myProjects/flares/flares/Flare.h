@@ -19,11 +19,18 @@
 class Flare{
 public:
     
+    GLvertex2f G;
+    GLvertex2f vel;
     GLvertex2f position;
+    float friction;
+    
     GLcolor4f c;
+    
     float scale;
     GLuint tex;
 
+    
+    
     Flare();
     ~Flare();
     void update();

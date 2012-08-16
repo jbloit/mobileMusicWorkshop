@@ -10,20 +10,42 @@
 #include "Flare.h"
 
 Flare::Flare(){
+    
+    G.x = 0.;
+    G.y = 0.01;
+    
+    vel.x = 0;
+    vel.y = 0;
+    
+    friction = -0.9;
 }
 
 Flare::~Flare(){
 }
 
 void Flare::update(){
+    vel.x += G.x;
+    vel.y += G.y;
 
-    float r = 0.1;
-    float g = 0.6;
-    float b = 0.8;
     
-    scale = 1 ;
+    position.x += vel.x;
+    position.y += vel.y;
     
-    c = GLcolor4f(r, g, b, 1);
+    
+  //  NSLog(@"x : %f  y : %f ", position.x, position.y);
+    if ((position.x > 1.) || (position.x < -1.)) vel.x *= friction;
+    if ((position.y > 1.) || (position.y < -1.)) vel.y *= friction;
+    
+    
+    
+//
+//    float r = 0.1;
+//    float g = 0.6;
+//    float b = 0.8;
+//    
+//    scale = 1 ;
+//    
+//    c = GLcolor4f(r, g, b, 1);
 }
 
 void Flare::render(){

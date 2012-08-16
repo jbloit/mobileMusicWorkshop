@@ -8,7 +8,7 @@
 
 #import "GLViewController.h"
 #import "Geometry.h"
-
+#import <CoreMotion/CoreMotion.h>
 #include "Flare.h"
 
 //------------------------------------------------------------------------------
@@ -26,11 +26,22 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
 
 
 
+
+
 @interface GLViewController (){
+    float time;
     
     GLuint tex;
 
     Flare * aFlare;
+    
+    CMMotionManager * motionManager;
+    
+    CMDeviceMotion * devMotion;
+    
+    float Width, Height;
+    
+    bool doMotionUpdate;
     
 }
 
@@ -72,6 +83,16 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
 
     tex = loadTexture(@"flare.png");
     
+    time = 0;
+    
+    doMotionUpdate = false;
+    
+    // get screen size
+    Width = self.view.frame.size.width;
+    Height = self.view.frame.size.height;
+    
+    NSLog(@"screen is %f/%f \n", Width, Height);
+    
     
     aFlare = new Flare();
     aFlare->position.x = 0;
@@ -80,9 +101,9 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
     aFlare->scale = 1;
     aFlare->tex = tex;
     
-     NSLog(@"view loaded");
+    motionManager = [[CMMotionManager alloc] init];
     
-    
+    [motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXArbitraryZVertical toQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion * motion, NSError *error){ devMotion = motion; }];      
 }
 
 - (void)viewDidUnload
@@ -104,7 +125,18 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
 
 - (void)update
 {
-
+    float dt = self.timeSinceLastUpdate;
+    
+    time += dt;
+    
+    if (doMotionUpdate) {
+        aFlare->G.x = devMotion.attitude.roll * 0.1;
+        aFlare->G.y = devMotion.attitude.pitch* 0.1;
+        aFlare->update();
+    }
+    
+    
+    
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
@@ -146,12 +178,16 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
      NSLog(@"touched out of loop");
     for(UITouch * touch in touches)
     {
+        
         NSLog(@"touched");
+        
+        doMotionUpdate = false;
+        
         CGPoint p = [touch locationInView:self.view];
         GLvertex2f touchPosition = uiview2gl(p, self.view);
 
         aFlare->position = touchPosition;
-/
+
     }
 }
 
@@ -169,7 +205,7 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
 {
     for(UITouch * touch in touches)
     {
-
+        doMotionUpdate = true;
     }
 }
 
