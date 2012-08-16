@@ -10,7 +10,7 @@
 #import "Geometry.h"
 #import <CoreMotion/CoreMotion.h>
 #include "Flare.h"
-
+#include "Audio.h"
 //------------------------------------------------------------------------------
 // name: uiview2gl
 // desc: convert UIView coordinates to the OpenGL coordinate space
@@ -42,6 +42,11 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
     float Width, Height;
     
     bool doMotionUpdate;
+    
+    Audio * audio;
+    
+    NSNotificationCenter * notifCenter;
+    NSOperationQueue *mainQueue;
     
 }
 
@@ -85,15 +90,6 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
     
     time = 0;
     
-    doMotionUpdate = false;
-    
-    // get screen size
-    Width = self.view.frame.size.width;
-    Height = self.view.frame.size.height;
-    
-    NSLog(@"screen is %f/%f \n", Width, Height);
-    
-    
     aFlare = new Flare();
     aFlare->position.x = 0;
     aFlare->position.y = 0;
@@ -101,9 +97,35 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
     aFlare->scale = 1;
     aFlare->tex = tex;
     
+    
+    doMotionUpdate = false;
+    
+    // get screen size
+    Width = self.view.frame.size.width;
+    Height = self.view.frame.size.height;
+    NSLog(@"screen is %f/%f \n", Width, Height);
+    
+    // audio layer
+    audio = new Audio;
+    
+
+    // poll accelerometer data
     motionManager = [[CMMotionManager alloc] init];
     
-    [motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXArbitraryZVertical toQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion * motion, NSError *error){ devMotion = motion; }];      
+    [motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXArbitraryZVertical toQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion * motion, NSError *error){ devMotion = motion; }];  
+    
+    // to manage events from flares
+    //notifCenter = [NSNotificationCenter defaultCenter];
+    
+    
+    notifCenter = [NSNotificationCenter defaultCenter];
+    mainQueue = [NSOperationQueue mainQueue];
+    
+     [notifCenter addObserverForName:@"bounce" object:nil
+                queue:mainQueue usingBlock:^(NSNotification *note) {//NSLog(@"There was a bounce"); 
+                                                                    audio->samples[0].armPlay();
+                }];
+    
 }
 
 - (void)viewDidUnload
@@ -188,6 +210,8 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
 
         aFlare->position = touchPosition;
 
+        audio->samples[0].recordStart();
+
     }
 }
 
@@ -206,6 +230,7 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
     for(UITouch * touch in touches)
     {
         doMotionUpdate = true;
+        audio->samples[0].recordStop();
     }
 }
 

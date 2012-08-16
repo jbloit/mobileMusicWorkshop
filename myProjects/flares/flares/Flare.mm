@@ -33,8 +33,15 @@ void Flare::update(){
     
     
   //  NSLog(@"x : %f  y : %f ", position.x, position.y);
-    if ((position.x > 1.) || (position.x < -1.)) vel.x *= friction;
-    if ((position.y > 1.) || (position.y < -1.)) vel.y *= friction;
+    if ((position.x > 1.) || (position.x < -1.)) {
+        vel.x *= friction;
+        [[NSNotificationCenter defaultCenter] postNotificationName: @"bounce" object:nil];
+    
+    }
+    if ((position.y > 1.) || (position.y < -1.)) {
+        vel.y *= friction;
+        [[NSNotificationCenter defaultCenter] postNotificationName: @"bounce" object:nil];
+    }
     
     
     
