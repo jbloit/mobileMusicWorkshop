@@ -116,17 +116,19 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
     
     // to manage events from flares
     //notifCenter = [NSNotificationCenter defaultCenter];
-    
-    
+        
     notifCenter = [NSNotificationCenter defaultCenter];
     mainQueue = [NSOperationQueue mainQueue];
     
-     [notifCenter addObserverForName:@"bounce" object:nil
-                queue:mainQueue usingBlock:^(NSNotification *note) {//NSLog(@"There was a bounce"); 
-                                                                    audio->samples[0].armPlay();
-                }];
-    
+    [notifCenter addObserver:self selector:@selector(bounceReceived) name:@"bounce" object:nil];
 }
+
+- (void)bounceReceived
+{
+    //NSLog(@"There was a bounce"); 
+    audio->samples[0].armPlay();
+}    
+
 
 - (void)viewDidUnload
 {
@@ -154,7 +156,7 @@ GLvertex2f uiview2gl(CGPoint p, UIView * view)
     if (doMotionUpdate) {
         aFlare->G.x = devMotion.attitude.roll * 0.1;
         aFlare->G.y = devMotion.attitude.pitch* 0.1;
-        aFlare->update();
+        aFlare->update(dt);
     }
     
     

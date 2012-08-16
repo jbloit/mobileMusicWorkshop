@@ -29,11 +29,12 @@ public:
     float scale;
     GLuint tex;
 
+    float frameRateFactor; 
     
     
     Flare();
     ~Flare();
-    void update();
+    void update(float dt);
     void render();
 
 };

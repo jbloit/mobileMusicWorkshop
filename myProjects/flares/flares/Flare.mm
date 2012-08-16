@@ -20,18 +20,23 @@ Flare::Flare(){
     friction = -0.9;
     radius = 0.1;
     
+    frameRateFactor = 10.0;
+    
 }
 
 Flare::~Flare(){
 }
 
-void Flare::update(){
-    vel.x += G.x;
-    vel.y += G.y;
+void Flare::update(float dt){
+    
+    dt *= frameRateFactor;
+    
+    vel.x += G.x * dt;
+    vel.y += G.y * dt;
 
     
-    position.x += vel.x;
-    position.y += vel.y;
+    position.x += vel.x * dt;
+    position.y += vel.y * dt;
     
 
     
@@ -57,18 +62,7 @@ void Flare::update(){
     }
     
     
-    
-    
-//    if ((position.x > 1.) || (position.x < -1.)) {
-//        vel.x *= friction;
-//        [[NSNotificationCenter defaultCenter] postNotificationName: @"bounce" object:nil];
-//    
-//    }
-//    if ((position.y > 1.) || (position.y < -1.)) {
-//        vel.y *= friction;
-//        [[NSNotificationCenter defaultCenter] postNotificationName: @"bounce" object:nil];
-//    }
-//    
+
     
     
 //
