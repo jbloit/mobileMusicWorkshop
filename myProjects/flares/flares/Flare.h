@@ -23,7 +23,7 @@ public:
     GLvertex2f vel;
     GLvertex2f position;
     float friction;
-    
+    int radius;
     GLcolor4f c;
     
     float scale;

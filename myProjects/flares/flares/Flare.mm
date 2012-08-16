@@ -18,6 +18,8 @@ Flare::Flare(){
     vel.y = 0;
     
     friction = -0.9;
+    radius = 0.1;
+    
 }
 
 Flare::~Flare(){
@@ -31,18 +33,42 @@ void Flare::update(){
     position.x += vel.x;
     position.y += vel.y;
     
+
     
-  //  NSLog(@"x : %f  y : %f ", position.x, position.y);
-    if ((position.x > 1.) || (position.x < -1.)) {
+    // check boundaries
+    if(position.x < (-1+radius)) {
+        position.x = (-1+radius);
         vel.x *= friction;
         [[NSNotificationCenter defaultCenter] postNotificationName: @"bounce" object:nil];
-    
-    }
-    if ((position.y > 1.) || (position.y < -1.)) {
-        vel.y *= friction;
+    } else if(position.x >= (1.0 - radius)) {
+        position.x = 1.0 -radius;
+        vel.x *= friction;
         [[NSNotificationCenter defaultCenter] postNotificationName: @"bounce" object:nil];
     }
     
+    if(position.y < (-1+radius)) {
+        position.y = -1+radius;
+        vel.y *= friction;
+        [[NSNotificationCenter defaultCenter] postNotificationName: @"bounce" object:nil];
+    } else if(position.y >= (1. - radius)) {
+        position.y = 1. - radius;
+        vel.y *= friction; 
+        [[NSNotificationCenter defaultCenter] postNotificationName: @"bounce" object:nil];
+    }
+    
+    
+    
+    
+//    if ((position.x > 1.) || (position.x < -1.)) {
+//        vel.x *= friction;
+//        [[NSNotificationCenter defaultCenter] postNotificationName: @"bounce" object:nil];
+//    
+//    }
+//    if ((position.y > 1.) || (position.y < -1.)) {
+//        vel.y *= friction;
+//        [[NSNotificationCenter defaultCenter] postNotificationName: @"bounce" object:nil];
+//    }
+//    
     
     
 //
